@@ -1,0 +1,42 @@
+// Here's how you would use Basetype
+
+@import "settings";
+@import "functions";
+
+body {
+  font-family: fontset-family($font-merriweather);
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: normal;
+  font-family: fontset-family($font-opensans);
+}
+
+h1 {
+  @include font-scale(large);
+}
+
+h2 {
+  @include font-scale(mid-large);
+}
+
+h3 {
+  @include font-scale(large);
+}
+
+h4 {
+  @include font-scale(mid);
+}
+
+h5 {
+  @include font-scale(small);
+}
+
+h6 {
+  @include font-scale(x-small);
+}
+
+p {
+  @include font-scale(base);
+}
