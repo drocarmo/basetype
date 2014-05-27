@@ -4,13 +4,13 @@
 @import "functions";
 
 body {
-  font-family: fontset-family($font-merriweather);
+  font-family: font-family($font-merriweather);
 }
 
 h1, h2, h3 {
   margin: 0;
   font-weight: normal;
-  font-family: fontset-family($font-opensans);
+  font-family: font-family($font-opensans);
 }
 
 h1 {

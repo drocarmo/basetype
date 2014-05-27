@@ -5,28 +5,28 @@
 // This is where the magic happens..
 // Inspired/borrowed from [The Ultimate Package](https://github.com/ultimate-package/tools.font-scale)
 
-@function _fontset-feature($feature, $family:$font-default, $set: 'base'){
+@function _font-feature($feature, $family:$font-default, $set: 'base'){
     $result: map-get(map-get($family, $set), $feature);
     @return ($result * 1px);
 }
 
-@function fontset-family($family) {
+@function font-family($family) {
     $result: map-get($family, typeface);
     @return unquote($result);
 }
 
 @function calc-font-size($set, $family:$font-default) {
-    @return _fontset-feature(font-size, $family, $set);
+    @return _font-feature(font-size, $family, $set);
 }
 
 @function calc-line-height($set, $family:$font-default) {
-    @return _fontset-feature(line-height, $family,  $set);
+    @return _font-feature(line-height, $family,  $set);
 }
 
 @mixin font-scale ($font-size, $family:$font-default, $line-height:$font-size) {
     font-size: calc-font-size($font-size, $family);
     line-height: calc-line-height($line-height, $family);
     @if $family != $font-default {
-        font-family: fontset-family($family);
+        font-family: font-family($family);
     }
 }

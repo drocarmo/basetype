@@ -4,11 +4,11 @@ An eloquently modular typographic scale tool using Sass.
 
 ## Components
 
-#### _functions.scss
-> Functions/mixins that contain the magic from [The Ultimate Package](https://github.com/ultimate-package/tools.font-scale).
-
 #### _settings.scss
 > Using Sass `$maps`, this is where you put your typeface settings you are using for your project. Think of it as your `_data` directory in [Jekyll](http://jekyllrb.com/docs/datafiles/). It won't ever appear in your production code, it's there for data reference for when you pass in your functions/mixins.
+
+#### _functions.scss
+> Functions/mixins that contain the magic from [The Ultimate Package](https://github.com/ultimate-package/tools.font-scale).
 
 ## Example
 
@@ -20,7 +20,7 @@ An eloquently modular typographic scale tool using Sass.
 @import "functions";
 
 h1 {
-  font-family: fontset-family($font-opensans);
+  font-family: font-family($font-opensans);
   @include font-scale(large);
 }
 
@@ -35,4 +35,4 @@ h1 {
 
 ==============================
 
-Again, huge props to [The Ultimate Package](https://github.com/ultimate-package/tools.font-scale) for the magic. I just broke it down for something I can use easily. Hope you can too. Let me know if you have any questions.
+Again, props to [The Ultimate Package](https://github.com/ultimate-package/tools.font-scale) for the mixin magic. Make sure to include and `@import` the two partials into your new project and you're good to go. Let me know if you have any questions.

@@ -2,7 +2,8 @@
 // Basetype Functions
 //
 
-// Set your typeface settings in order to pass the functions/mixins
+// This is where you get to personalize..
+// Set your *own typeface settings in order to pass the _functions partial
 
 @import url("http://fonts.googleapis.com/css?family=Merriweather");
 
@@ -86,4 +87,5 @@ $font-opensans: (
   )
 );
 
+// This is your fallback typeface variable
 $font-default: $font-merriweather;
